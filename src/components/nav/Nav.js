@@ -19,7 +19,7 @@ export default function Nav(){
     <div className="nav">
 
 
-      <Link to="#top">Home</Link>
+      <Link to="/home">Home</Link>
       <Link to="#about">About</Link>
 
       <div className="dropdown">

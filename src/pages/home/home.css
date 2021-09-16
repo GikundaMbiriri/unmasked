@@ -1,6 +1,7 @@
 .banner{
 	background-color: #E6EEEE;
 	padding: 30px;
+	text-align: center;
 }
 .bb h1{
 color: #636363;
@@ -10,4 +11,8 @@ color: #636363;
 	color: #556571;
 	font-size: 14px;
 	font-weight: 500;
+}
+.hh{
+	width: 100vw;
+	
 }

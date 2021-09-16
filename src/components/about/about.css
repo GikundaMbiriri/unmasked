@@ -1,0 +1,43 @@
+.about h2{
+	text-align: center;
+	color: #636363;
+	font-size: 32px;
+}
+.about p{
+	text-align: center;
+	color: #556571;
+	
+
+}
+.about{
+	
+	width: 100vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+.left{
+	width: 40vw;
+
+}
+.right{
+	width: 40vw;
+}
+.im{
+	width: 100%;
+	
+	object-fit: cover;
+}
+@media(max-width: 800px){
+	.about{
+		width: 100vw;
+	}
+	.left{
+		width: 100vw;
+	}
+	.right{
+		width: 100vw;
+	}
+	
+}
