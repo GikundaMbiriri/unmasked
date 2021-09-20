@@ -1,5 +1,19 @@
-.im {
-  height: 60vh;
+.carrier {
+  position: relative;
+}
+.tt {
+  position: absolute;
+  top: 200px;
   width: 100vw;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+  color: white;
+  z-index: 2;
+}
+
+.im {
+  width: 100vw;
+  height: 70vh;
   object-fit: cover;
 }

@@ -4,6 +4,8 @@ import anxiety from '../../images/anxiety.jpg'
 import stress from '../../images/stress.jpg'
 import './about.css';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import { FaUserAlt } from 'react-icons/fa';
+import { FaComments } from 'react-icons/fa';
 
 export default function About(){
    return (
@@ -24,16 +26,16 @@ export default function About(){
 <h2>How I overcame Social Anxiety</h2>
 <div className="chini">
 <div className="det">
-<AiOutlineCalendar/>
-<div className="de">16 September 2021</div>
-</div>
-<div className="det">
 <AiOutlineCalendar className="d" />
-<div className="de">16 September 2021</div>
+<div className="de"> 16 September 2021</div>
 </div>
 <div className="det">
-<AiOutlineCalendar/>
-<div className="de">16 September 2021</div>
+<FaUserAlt className="d" />
+<div className="de"> John Doe</div>
+</div>
+<div className="det">
+<FaComments className="d" />
+<div className="de"> Leave a comment</div>
 </div>
 </div>
 <p>Over the years, I’ve learned a number of methods and techniques to manage my depression and anxiety. Some of those have worked very well (meditation and talk therapy), while others haven’t been as effective (I’m hoping to come back to journaling one day, but it’s not soon). Either way, I’ve learned a lot about what’s helpful for me on my mental health journey, and used those lessons to continue building</p>

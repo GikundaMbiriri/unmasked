@@ -1,6 +1,7 @@
 .advice {
   background-color: #f2f2f2;
   margin-top: 30px;
+  padding-bottom: 30px;
 }
 .advice h2 {
   color: #3b3f4a;
@@ -22,7 +23,7 @@
   box-shadow: 5px 5px 3px #888888;
 }
 .fff h4 {
-  color: #91278f;
+  color: #3b3f4a;
 }
 @media (max-width: 800px) {
   .fff {

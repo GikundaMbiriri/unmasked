@@ -8,9 +8,12 @@ import About from '../../components/about/About'
 import Topics from '../../components/topics/Topics'
 import Advice  from "../../components/advice/Advice";
 import Footer from "../../components/footer/Footer";
+import Subscribe from "../../components/subscribe/Subscribe";
+import Nav from '../../components/nav/Nav'
 export default function Home(){
    return (
     <>
+    <Nav/>
     <Banner/>
 
     <div className="hh">
@@ -21,7 +24,7 @@ export default function Home(){
     </div>
     </div>
 <About/>
-
+<Subscribe/>
 <Advice/>
 
 <Footer/>
