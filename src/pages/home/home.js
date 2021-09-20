@@ -6,6 +6,8 @@ import './home.css'
 import Banner from '../../components/banner/Banner'
 import About from '../../components/about/About'
 import Topics from '../../components/topics/Topics'
+import Advice  from "../../components/advice/Advice";
+import Footer from "../../components/footer/Footer";
 export default function Home(){
    return (
     <>
@@ -19,7 +21,10 @@ export default function Home(){
     </div>
     </div>
 <About/>
-<Topics/>
+
+<Advice/>
+
+<Footer/>
 </div>
     </> 
   );
