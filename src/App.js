@@ -7,10 +7,11 @@ function App() {
   return (
     <>
      <Router>
- <Nav/>
- <div className="hh"/>
+ {/* <Nav/> */}
+
 <Switch>
 <Route  exact path="/home" component={home} />
+
 </Switch>
  </Router>
 

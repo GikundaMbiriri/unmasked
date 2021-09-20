@@ -1,37 +1,33 @@
+const navSlide = () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
+  
+  //Toggle Nav
 
+  if(burger){
+  burger.addEventListener('click', ()=>{
+    nav.classList.toggle('nav-active');
+    
+    //Animate Links
+    navLinks.forEach((link, index)=>{
+      if(link.style.animation){
+        link.style.animation = ''
+      }else{
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
 
-$("#navbarMenu ul .submenu > a").append('<span class="submenu-button"></span>');
+      }
+    });
+    
+    //burger animation
+    burger.classList.toggle('toggle');
+    
+    
+  });}
+  
+  
+  
+  
+}
 
-
-$(".toggleMenu").click(function(e){
-    $("nav > ul").slideToggle();
-    e.preventDefault();
-});
-
-
-$(".submenu ul li").click(function(e){
-    e.stopPropagation();
-});
-
-//CLICK ON SUBMENU LINK
-$(".submenu").click(function(e){
-    //CLOSE OPEN SUBMENU
-    if($(this).hasClass("active")){
-        $("#navbarMenu ul li").removeClass('active');
-        $('#navbarMenu ul li ul').slideUp();
-    }else{
-        $("#navbarMenu ul li").removeClass('active');
-        $("#navbarMenu ul li ul").slideUp();
-        $(this).addClass("active");
-        $(this).find('ul').stop().slideToggle();
-        e.stopPropagation();
-    }
-    $("#navbarMenu ul li").removeClass('openSub');
-    $(this).addClass('openSub');
-
-});
-
-$("body, html").click(function(){
-    $("#navbarMenu ul li").removeClass('active openSub');
-    $('#navbarMenu ul li ul').slideUp();
-});
+navSlide();
