@@ -1,5 +1,5 @@
-.im{
-	height: 60vh;
-	width: 100vw;
-	
+.im {
+  height: 60vh;
+  width: 100vw;
+  object-fit: cover;
 }
