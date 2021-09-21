@@ -1,0 +1,20 @@
+.anxiet h2 {
+  text-align: center;
+}
+.ts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+}
+.lef {
+  width: 40vw;
+}
+.righ {
+  width: 40vw;
+}
+.apeter {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}

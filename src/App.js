@@ -4,6 +4,7 @@ import Footer from './components/footer/Footer'
 import Nav from './components/nav/Nav';
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import home from './pages/home/home';
+import anxiety from './pages/anxiety/anxiety';
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
 
 <Switch>
 <Route  exact path="/home" component={home} />
+<Route exact path="/anxiety" component={anxiety}/>
 
 </Switch>
 

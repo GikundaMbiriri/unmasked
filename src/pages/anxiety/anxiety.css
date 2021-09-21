@@ -1,0 +1,29 @@
+.fir {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+}
+.anx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 40vh;
+  object-fit: cover;
+}
+.tt {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  z-index: 2;
+}
+.tt h2 {
+  color: #81b0ac;
+  text-align: center;
+  font-size: 42px;
+}
+.tt h6 {
+  color: #aa5626;
+  text-align: center;
+  font-size: 28px;
+}

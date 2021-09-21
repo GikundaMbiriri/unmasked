@@ -5,6 +5,9 @@
   line-height: 24px;
   color: #737373;
 }
+.containr {
+  padding: 5px;
+}
 .sitefooter hr {
   border-top-color: #bbb;
   opacity: 0.5;
