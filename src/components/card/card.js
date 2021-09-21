@@ -1,6 +1,8 @@
 import React from 'react'
 import im from '../../images/mental.jpg';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import './card.css';
+
 function card() {
   return (
     <>

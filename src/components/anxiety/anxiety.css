@@ -1,20 +1,97 @@
-.anxiet h2 {
+.jk {
   text-align: center;
+  color: black;
 }
 .ts {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100vw;
+  margin-top: 30px;
 }
 .lef {
-  width: 40vw;
+  width: 65vw;
 }
 .righ {
-  width: 40vw;
+  width: 25vw;
+}
+.acard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.ap h2 {
+  text-align: left;
+  font-size: 25px;
+}
+.peter {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+.one {
+  width: 40%;
+  color: #aa5626;
+}
+.two {
+  width: 60%;
+  color: #aa5626;
 }
 .apeter {
-  width: 400px;
-  height: 500px;
+  width: 45%;
+  height: auto;
   object-fit: cover;
+}
+.ap {
+  width: 45%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.ai {
+  display: flex;
+}
+.tg {
+  margin-bottom: 10px;
+}
+.aii {
+  padding-left: 15px;
+  color: #c38765;
+}
+.td {
+  font-size: 28px;
+  padding-right: 5px;
+}
+.cr {
+  color: #c38765;
+}
+.righ h2 {
+  color: #81b0ac;
+  box-shadow: 0px 3px #eee;
+  text-align: center;
+}
+.ment {
+  font-size: 18px;
+  font-weight: 600;
+}
+@media (max-width: 800px) {
+  .lef {
+    width: 90vw;
+  }
+  .righ {
+    width: 90vw;
+    margin-bottom: 30px;
+  }
+  .apeter {
+    width: 100%;
+  }
+  .peter {
+    width: 100%;
+  }
+  .acard {
+    width: 90vw;
+  }
+  .ap {
+    width: 90vw;
+  }
 }

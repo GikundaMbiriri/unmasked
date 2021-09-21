@@ -7,6 +7,7 @@ import anx from '../../images/anx.jpg';
 import Footer from "../../components/footer/Footer";
 import Nav from '../../components/nav/Nav'
 import Anxiety from "../../components/anxiety/Anxiety";
+import Subscribe from "../../components/subscribe/Subscribe";
 export default function anxiety(){
    return (
     <>
@@ -19,7 +20,7 @@ export default function anxiety(){
        </div>
    </div>
 <Anxiety/>
-   
+<Subscribe/>
 <Footer/>
     </> 
   );
