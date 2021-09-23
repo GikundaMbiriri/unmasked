@@ -6,11 +6,19 @@ import './about.css';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { FaUserAlt } from 'react-icons/fa';
 import { FaComments } from 'react-icons/fa';
+import { connect } from "react-redux";
+import { getArticles } from "../../redux/actions/dataAction";
+import PropTypes from "prop-types";
+import Moment from 'react-moment';
 
-export default function About(){
-   return (
-    <>
-   <div className="about">
+function About(props){
+   useEffect(()=>{
+      props.getArticles();
+
+   },[]);
+   const { articles, loading } = props.data;
+   console.log(articles[0]);
+   const ab=loading?<p>loading</p>:   <div className="about">
    <div className="left">
    <div className="juu">
    <div><b>Dont Miss</b></div>
@@ -21,56 +29,45 @@ export default function About(){
    <div>Trauma</div>
    </div>
    <div className="beba">
-   <div className="current">
+
+ {articles[0]?  <div className="current">
 <img src={anxiety} alt="anxiety" className="anxiety"/>
-<h2>How I overcame Social Anxiety</h2>
+<h2>{articles[0].title}</h2>
 <div className="chini">
 <div className="det">
 <AiOutlineCalendar className="d" />
-<div className="de"> 16 September 2021</div>
+<div className="de"> {<Moment format="D MMM YYYY" withTitle>
+                {articles[0].createdAt}
+            </Moment>}</div>
 </div>
 <div className="det">
 <FaUserAlt className="d" />
-<div className="de"> John Doe</div>
+<div className="de"> {articles[0].name}</div>
 </div>
 <div className="det">
 <FaComments className="d" />
 <div className="de"> Leave a comment</div>
 </div>
 </div>
-<p>Over the years, I’ve learned a number of methods and techniques to manage my depression and anxiety. Some of those have worked very well (meditation and talk therapy), while others haven’t been as effective (I’m hoping to come back to journaling one day, but it’s not soon). Either way, I’ve learned a lot about what’s helpful for me on my mental health journey, and used those lessons to continue building</p>
+<div className="sic">{articles[0].body}</div>
 <div className="conti">Continue reading...</div>
-   </div>
+   </div>:<p>Waiting</p>
+  }
+  
    <div className="others">
       <h2 className="oh">STRESS</h2>
-<div className="ot">
+{articles[0]?articles.slice(0,4).map((article)=><div className="ot">
+
 <img src={stress} alt="stress" className="oti"/>
 <div className="otis">
-<h6>We fought social Anxiety</h6>
-<p>Katy Liu on Sep 29, 2017 at 9:48 am</p>
+<h6>{article.title}</h6>
+<p> {article.name} on  <Moment format="D MMM YYYY" withTitle>
+                {article.createdAt}
+            </Moment> at 9:40 am</p>
 </div>
-</div>
-<div className="ot">
-<img src={stress} alt="stress" className="oti"/>
-<div className="otis">
-<h6>We fought social Anxiety</h6>
-<p>Katy Liu on Sep 29, 2017 at 9:48 am</p>
-</div>
-</div>
-<div className="ot">
-<img src={stress} alt="stress" className="oti"/>
-<div className="otis">
-<h6>We fought social Anxiety</h6>
-<p>Katy Liu on Sep 29, 2017 at 9:48 am</p>
-</div>
-</div>
-<div className="ot">
-<img src={stress} alt="stress" className="oti"/>
-<div className="otis">
-<h6>We fought social Anxiety</h6>
-<p>Katy Liu on Sep 29, 2017 at 9:48 am</p>
-</div>
-</div>
+</div>):<p>still loading</p>}
+
+
    </div>
    
    </div>
@@ -98,6 +95,20 @@ export default function About(){
    </div>
    </div>
 
+   
+   
+   return (
+    <>
+{ab}
     </> 
   );
 }
+
+About.propTypes = {
+   getArticles:PropTypes.func.isRequired,
+   data: PropTypes.object.isRequired,
+}
+const mapStateToProps = (state) => ({
+   data: state.data,
+ });
+export default connect(mapStateToProps, { getArticles })(About);

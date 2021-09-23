@@ -113,9 +113,17 @@
   box-shadow: 0px 3px #eee;
   color: #3b3f4a;
 }
+.sic {
+  height: 150px;
+  overflow: hidden;
+}
 @media (max-width: 800px) {
   .about {
     width: 100vw;
+  }
+  .sic {
+    height: 100px;
+    overflow: hidden;
   }
   .left {
     width: 100vw;

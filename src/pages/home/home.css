@@ -1,18 +1,27 @@
-.banner{
-	background-color: #E6EEEE;
-	padding: 30px;
-	text-align: center;
+.banner {
+  background-color: #e6eeee;
+  padding: 30px;
+  text-align: center;
 }
-.bb h1{
-color: #636363;
+.bb h1 {
+  color: #636363;
 }
 
-.bb h6{
-	color: #556571;
-	font-size: 14px;
-	font-weight: 500;
+.bb h6 {
+  color: #556571;
+  font-size: 14px;
+  font-weight: 500;
 }
-.hh{
-	width: 100vw;
-	
+.hh {
+  width: 100vw;
+}
+.cheki {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.onai {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
