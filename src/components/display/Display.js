@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { connect } from "react-redux";
 import { getArticles } from "../../redux/actions/dataAction";
 import PropTypes from "prop-types";
@@ -9,21 +9,29 @@ import { FaComments } from 'react-icons/fa';
 import about from '../../images/about.jpg'
 import anxiety from '../../images/anxiety.jpg'
 import stress from '../../images/stress.jpg'
+import { Link } from "react-router-dom";
 import '../about/about.css';
-
+import './display.css'
 function Display(props) {
     useEffect(()=>{
         props.getArticles();
   
      },[]);
-     const { articles, loading } = props.data;
-     const  tx=articles.filter(article=>article.category==="mental");
+    
+     const { articles, } = props.data;
+     const [tx ,setTx]=useState(articles)
+    const [stres,setStress]=useState("activ")
 
-    //  function handleAll(){
 
-    //  }
-    //  function handleStress(){
-    //  }
+ 
+
+     function handleStress(){
+        const yy =articles.filter(article=>article.category==="mental");
+        setTx(yy);
+       setStress("activ stres");
+
+
+     }
     //  function handleTrauma(){
 
     //  }
@@ -36,7 +44,7 @@ function Display(props) {
    <div className="juu">
    <div><b>Dont Miss</b></div>
    <div className="activ">All</div>
-   <div className="activ">Stress</div>
+   <div className={stres} onClick={handleStress}>Stress</div>
    <div className="activ">Anxiety</div>
    <div className="activ">Dediression</div>
    <div className="activ">Trauma</div>
@@ -69,16 +77,20 @@ function Display(props) {
   
    <div className="others">
       <h2 className="oh">STRESS</h2>
-{articles[0]?tx.slice(0,4).map((article)=><div className="ot">
+{articles[0]?tx.slice(0,4).map((article)=>{
+const kk=`article/${article.articleId}`;
+return (
+<div className="ot">
 
 <img src={stress} alt="stress" className="oti"/>
 <div className="otis">
-<h6>{article.title}</h6>
+    <Link to={kk}><h6>{article.title}</h6></Link>
+
 <p> {article.name} on  <Moment format="D MMM YYYY" withTitle>
                 {article.createdAt}
             </Moment> at 9:40 am</p>
 </div>
-</div>):<p>still loading</p>}
+</div>)}):<p>still loading</p>}
 
 
    </div>

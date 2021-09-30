@@ -1,0 +1,25 @@
+.atop {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+}
+.coco {
+  position: absolute;
+  background-color: rgba(10, 10, 10, 0.596);
+  height: 50vh;
+  width: 100vw;
+}
+.apic {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+.ha {
+  position: absolute;
+  left: 25%;
+  top: 35%;
+  color: #eee;
+}

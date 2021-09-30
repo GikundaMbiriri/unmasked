@@ -1,19 +1,46 @@
-.carrier {
-  position: relative;
-}
-.tt {
-  position: absolute;
-  top: 200px;
-  width: 100vw;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: auto;
-  color: white;
-  z-index: 2;
-}
-
-.im {
+.slide-container {
   width: 100vw;
   height: 70vh;
+  position: relative;
+}
+.dk {
+  width: 100vw;
+  height: 70vh;
+}
+.each-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.iim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70vh;
+  width: 100vw;
   object-fit: cover;
+}
+.image-container {
+  position: relative;
+  height: 70vh;
+  width: 100vw;
+}
+.kemikal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bh {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+.bh h1 {
+  color: #ffffff;
+}
+.bh h2 {
+  color: rgb(241, 106, 10);
 }

@@ -18,7 +18,7 @@ import {
     dispatch({ type: LOADING_UI });
     axios
       .get(
-        `https://us-central1-pizzes-2f536.cloudfunctions.net/api/one/${articleId}`
+        `https://us-central1-unmasked-f020e.cloudfunctions.net/api/getArticle/${articleId}`
       )
       .then((res) => {
         dispatch({ type: SET_ARTICLE, payload: res.data });

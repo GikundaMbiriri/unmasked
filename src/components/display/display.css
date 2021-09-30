@@ -1,0 +1,9 @@
+.activ {
+  cursor: pointer;
+}
+.activ:hover {
+  color: aqua;
+}
+.stres {
+  color: aqua;
+}
