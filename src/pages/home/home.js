@@ -41,8 +41,8 @@ function Home(props){
 <Footer/>
 </div></>: <div className="cheki">
 <Loader
-        type="Puff"
-        color="#00BFFF"
+        type="Circles"
+        color="#f58032;"
         height={100}
         width={100}
         className="onai"

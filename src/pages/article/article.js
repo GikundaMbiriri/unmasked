@@ -15,7 +15,9 @@ function article(props){
  
  
   return(<>
+  <Nav/>
   <Article id={props.match.params.id}/>
+  <Footer/>
   </>);
 }
 

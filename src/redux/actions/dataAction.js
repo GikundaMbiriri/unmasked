@@ -30,7 +30,7 @@ import {
     dispatch({ type: LOADING_UI });
     axios
       .post(
-        `https://us-central1-pizzes-2f536.cloudfunctions.net/api/blog/${articleId}/comment`,commentData
+        `https://us-central1-unmasked-f020e.cloudfunctions.net/api/postComment/${articleId}`,commentData
       )
       .then((res) => {
         dispatch({ type: SEND_COMMENT, payload: res.data });

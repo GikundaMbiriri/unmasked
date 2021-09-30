@@ -1,0 +1,58 @@
+.tx {
+  width: 80vw;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.comh {
+  text-align: center;
+}
+.comho {
+  width: 80vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: auto;
+}
+.comment {
+  width: 50%;
+  justify-content: space-around;
+
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 4px #eee;
+}
+.cleft {
+  width: 20%;
+}
+.cright {
+  width: 70%;
+}
+.ctjuu {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+.cname {
+  color: #aa5626;
+  font-weight: 600;
+  font-size: 17px;
+}
+.cdate {
+  font-size: 15px;
+  font-style: italic;
+}
+.cbody {
+  font-size: 15px;
+}
+@media (max-width: 800px) {
+  .comment {
+    width: 100%;
+  }
+  .cname {
+    font-size: 15px;
+    font-weight: 575;
+  }
+  .cdate {
+    font-size: 14px;
+  }
+}
