@@ -19,7 +19,7 @@ function About(props){
  <Display/>
    <div className="right">
 <div className="abo">
-   <h2>About Unmasked</h2>
+   <h2>Benefits of Sharing</h2>
    <p>
    The mango is perfect in that it is always yellow and if it’s not, I don’t want to hear about it. The mango’s only flaw, and it’s a minor one, is the effort it sometimes takes to undress the mango, carve it up in a way that makes sense, and find its way to the mouth.
    </p>

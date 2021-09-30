@@ -21,7 +21,10 @@ function Home(props){
 
  },[]);
  const {articles}=props.data;
- const loaded=articles[0]?<> <Nav/>
+ const loaded=articles[0]?<>
+
+  <Nav/>
+
  <Banner/>
 
  <div className="hh">

@@ -2,8 +2,12 @@
   cursor: pointer;
 }
 .activ:hover {
-  color: aqua;
+  color: #f47523;
 }
 .stres {
-  color: aqua;
+  color: #f47523;
+}
+.jh {
+  text-decoration: none;
+  color: #aa5626;
 }

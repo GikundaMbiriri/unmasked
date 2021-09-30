@@ -39,8 +39,11 @@
   left: 20%;
 }
 .bh h1 {
-  color: #ffffff;
+  color: #f58032;
+  font-size: 24px;
+  padding-bottom: 20px;
 }
 .bh h2 {
-  color: rgb(241, 106, 10);
+  color: #ffffff;
+  font-size: 36px;
 }

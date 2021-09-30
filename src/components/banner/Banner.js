@@ -9,7 +9,7 @@ const fadeImages = [
 ];
 
 const fadeProperties = {
-  duration: 2000,
+  duration: 3500,
   transitionDuration: 1000,
   infinite: true,
   arrows:false,
@@ -28,8 +28,8 @@ const Banner = () => {
             <img src={fadeImages[0]} style={{width:"100vw",height:"70vh",objectFit:"cover"}} alt="banner" />
             <div className="kemikal"/>
             <div  className="bh">
-              <h1>Mental Health</h1>
-            <h2>Kama ngamwaya Kemikal</h2>
+              <h1>The story of my life</h1>
+            <h2>The fear is real but the danger is not.</h2>
             </div>
           </div>
         
@@ -37,12 +37,23 @@ const Banner = () => {
         <div className="each-fade">
           <div className="image-container">
             <img src={fadeImages[1]} style={{width:"100vw",height:"70vh",objectFit:"cover"}} alt="banner" />
+            <div className="kemikal"/>
+            <div  className="bh">
+              <h1>The story of my life</h1>
+            <h2>You become courageous because you face your fear.</h2>
+            </div>
           </div>
          
         </div>
         <div className="each-fade">
           <div className="image-container">
             <img src={fadeImages[2]} style={{width:"100vw",height:"70vh",objectFit:"cover"}} alt="banner" />
+            <div className="kemikal"/>
+            <div  className="bh">
+              <h1>The story of my life</h1>
+            <h2>If you feel like you are sinking,try positive thinking.</h2>
+            </div>
+            
           </div>
          
         </div>

@@ -84,7 +84,7 @@ return (
 
 <img src={stress} alt="stress" className="oti"/>
 <div className="otis">
-    <Link to={kk}><h6>{article.title}</h6></Link>
+    <Link to={kk} className="jh"><h6>{article.title}</h6></Link>
 
 <p> {article.name} on  <Moment format="D MMM YYYY" withTitle>
                 {article.createdAt}
