@@ -73,7 +73,7 @@
 }
 
 .dropdown-menu {
-  background-color: #a841a3;
+  background-color: #8b5529;
   border-radius: 1rem;
 }
 .nav-toggler {
@@ -186,5 +186,8 @@
 
   /* nav-toggler css start */
   /* navbar css for mobile end */
+  .he {
+    padding-left: 0;
+  }
 }
 /* mobile breakpoint end */

@@ -11,9 +11,13 @@ import { connect } from "react-redux";
 import { getArticles } from "../../redux/actions/dataAction";
 import PropTypes from "prop-types";
 import Article from '../../components/article/Article';
-function article(props){
+function Articl(props){
  
- 
+ useEffect(() => {
+   
+  window.scrollTo(0, 0);
+   
+ }, [])
   return(<>
   <Nav/>
   <Article id={props.match.params.id}/>
@@ -22,4 +26,4 @@ function article(props){
 }
 
 
-export default article;
+export default Articl;

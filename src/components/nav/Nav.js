@@ -36,22 +36,21 @@ const Nav = (props) => {
        
                
                 <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <Link className="nav-link" to="/audio" style={{color:'white'}}>
+                  <Link className="nav-link" to="/" style={{color:'white'}}>
                     Podcast
                   </Link>
                 </li>
                 <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <Link className="nav-link" to="/contact" style={{color:'white'}} >
+                  <Link className="nav-link" to="/" style={{color:'white'}} >
                     Contact
                   </Link>
                 
                 </li>
                 <li className="nav-item dropdown">
                   <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color:'white'}}>About us</Link>
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color:'white'}}>Categories</Link>
                      <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about" >About Pizzes</Link></div>
-        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about1" >About blogger</Link></div>
+        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/anxiety" >Anxiety</Link></div>
 
         </div>
                 </li>
@@ -66,20 +65,19 @@ const Nav = (props) => {
       <nav className="site-navbar">
 
 
-        <ul className={cake?'':'open'} onClick={()=>cake?'':setCake(!cake)}>
-          <li><Link to="/">home</Link></li>
-          <li><Link  to="/audio">podcast</Link ></li>
+        <ul className={cake?'':'open'} >
+          <li onClick={()=>cake?'':setCake(!cake)}><Link to="/">home</Link></li>
+          <li onClick={()=>cake?'':setCake(!cake)}><Link  to="/">podcast</Link ></li>
           <li className="nav-item dropdown">
                   <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color:'white'}}>About us</Link>
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color:'white'}}>Categories</Link>
                      <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about" >About Pizzes</Link></div>
-        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about1" >About blogger</Link></div>
+        <div data-toggle="collapse" data-target=".navbar-collapse.show" onClick={()=>cake?'':setCake(!cake)}>  <Link className="dropdown-item" to="/anxiety" >Anxiety</Link></div>
 
         </div>
                 </li>
               
-          <li><Link  to="/contact">contact</Link ></li>
+          <li onClick={()=>cake?'':setCake(!cake)}><Link  to="/">contact</Link ></li>
         </ul>
 
         <button className={cake?'nav-toggler':'nav-toggler toggler-open'} onClick={()=>setCake(!cake)}>

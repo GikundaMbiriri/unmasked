@@ -38,6 +38,8 @@ function Display(props) {
     //  function handleAnxiety(){
 
     //  }
+    const kj=`article/${articles[0].articleId}`;
+
     return (
         <div>
              <div className="left">
@@ -71,7 +73,9 @@ function Display(props) {
 </div>
 </div>
 <div className="sic">{articles[0].body}</div>
+<Link to={kj}>
 <div className="conti">Continue reading...</div>
+</Link>
    </div>:<p>Waiting</p>
   }
   
@@ -84,9 +88,9 @@ return (
 
 <img src={stress} alt="stress" className="oti"/>
 <div className="otis">
-    <Link to={kk} className="jh"><h6>{article.title}</h6></Link>
+    <Link to={kk} className="jh"><h6 className="jh">{article.title}</h6></Link>
 
-<p> {article.name} on  <Moment format="D MMM YYYY" withTitle>
+<p> <span className="jjh">{article.name} </span>on  <Moment format="D MMM YYYY" withTitle>
                 {article.createdAt}
             </Moment> at 9:40 am</p>
 </div>
