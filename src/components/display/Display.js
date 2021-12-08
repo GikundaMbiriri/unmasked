@@ -21,6 +21,11 @@ function Display(props) {
      const { articles, } = props.data;
      const [tx ,setTx]=useState(articles)
     const [stres,setStress]=useState("activ")
+    const [all,setAll]=useState("activ stres")
+    const [depression,setDepression]=useState("activ")
+    const [trauma,setTrauma]=useState("activ")
+    const [anxiety,setAnxiety]=useState("activ")
+const [heading,setHeading]=useState("Stories");
 
 
  
@@ -29,7 +34,55 @@ function Display(props) {
         const yy =articles.filter(article=>article.category==="mental");
         setTx(yy);
        setStress("activ stres");
+       setAll("activ");
+       setDepression("activ");
+       setTrauma("activ");
+       setAnxiety("activ");
+setHeading("Stress");
 
+     }
+     function handleAnxiety(){
+        const yy =articles.filter(article=>article.category==="anxiety");
+        setTx(yy);
+       setStress("activ");
+       setAll("activ");
+       setDepression("activ");
+       setTrauma("activ");
+       setAnxiety("activ stres");
+       setHeading("Anxiety");
+
+     }
+     function handleDepression(){
+        const yy =articles.filter(article=>article.category==="depression");
+        setTx(yy);
+       setStress("activ");
+       setAll("activ");
+       setDepression("activ stres");
+       setTrauma("activ");
+       setAnxiety("activ");
+       setHeading("Depression");
+
+     }
+     function handleTrauma(){
+        const yy =articles.filter(article=>article.category==="trauma");
+        setTx(yy);
+       setStress("activ");
+       setAll("activ");
+       setDepression("activ");
+       setTrauma("activ stres");
+       setAnxiety("activ");
+       setHeading("Trauma");
+
+     }
+     function handleAll(){
+        const yy =articles;
+        setTx(yy);
+       setStress("activ");
+       setAll("activ stres");
+       setDepression("activ");
+       setTrauma("activ");
+       setAnxiety("activ");
+       setHeading("Stories");
 
      }
     //  function handleTrauma(){
@@ -45,11 +98,11 @@ function Display(props) {
              <div className="left">
    <div className="juu">
    <div><b>Dont Miss</b></div>
-   <div className="activ">All</div>
+   <div className={all} onClick={handleAll}>All</div>
    <div className={stres} onClick={handleStress}>Stress</div>
-   <div className="activ">Anxiety</div>
-   <div className="activ">Dediression</div>
-   <div className="activ">Trauma</div>
+   <div className={anxiety} onClick={handleAnxiety}>Anxiety</div>
+   <div className={depression} onClick={handleDepression}>Depression</div>
+   <div className={trauma} onClick={handleTrauma}>Trauma</div>
    </div>
    <div className="beba">
 
@@ -72,7 +125,8 @@ function Display(props) {
 <div className="de"> Leave a comment</div>
 </div>
 </div>
-<div className="sic">{articles[0].body}</div>
+
+<div className="sic" dangerouslySetInnerHTML={{ __html:articles[0].body}}/>
 <Link to={kj}>
 <div className="conti">Continue reading...</div>
 </Link>
@@ -80,7 +134,8 @@ function Display(props) {
   }
   
    <div className="others">
-      <h2 className="oh">STRESS</h2>
+      <h2 className="oh">{heading}</h2>
+      {tx.length<1?<h4>No {heading} stories yet</h4>:<></>}
 {articles[0]?tx.slice(0,4).map((article)=>{
 const kk=`article/${article.articleId}`;
 return (

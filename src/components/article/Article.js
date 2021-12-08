@@ -27,7 +27,8 @@ function Article(props) {
 <p className="pdate"> created on {<Moment format="D MMM YYYY" withTitle>
                 {props.article.createdAt}
             </Moment>}</p>
-<div className="abody">{props.article.body}</div>
+            <div className="abody" dangerouslySetInnerHTML={{ __html: props.article.body }} />
+
        </div>
       <Comments id={props.article.articleId}/>
        </>: <div className="cheki">

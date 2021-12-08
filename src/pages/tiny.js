@@ -5,6 +5,8 @@ import { AiOutlineClose,AiOutlineUpload } from 'react-icons/ai'
 import Modal from 'react-modal';
 import axios from "axios";
 import './tiny.css';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 import { Select, Input } from 'antd';
 const customStyles = {
   content: {
@@ -27,6 +29,7 @@ export default function App(props) {
   const [title,setTitle]=useState("");
   const [image,setImage]=useState("");
   const [ff,setFf]=useState({});
+  const [ready,setReady]=useState(true);
 
   const { Option } = Select;
   const [file, selectFile] = useFileUpload()
@@ -51,6 +54,8 @@ export default function App(props) {
   }
 const handleSubmit=async ()=>{
   var k=props.history;
+  setReady(false);
+
   const resp=await  axios.post(
     "https://us-central1-unmasked-f020e.cloudfunctions.net/api/image",
     ff
@@ -68,6 +73,7 @@ const sen=await axios
   "https://us-central1-unmasked-f020e.cloudfunctions.net/api/postArticles",
   data
 )
+setReady(true)
 console.log(sen)
 k.push("/");
 }
@@ -85,6 +91,8 @@ setFf(formData);
   }
   return (
     <>
+    <div className="be">
+     <div onClick={openModal} className="ss">Submit</div>
       <Editor
         onInit={(evt, editor) => editorRef.current = editor}
         initialValue="<p>This is the initial content of the editor.</p>"
@@ -183,9 +191,11 @@ setFf(formData);
           content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
         }}
         onEditorChange={handleEditorChange}
+        
       />
+     
           <div>
-      <div onClick={openModal} className="ss">Submit</div>
+      
       <Modal
         isOpen={modalIsOpen}
       
@@ -233,12 +243,14 @@ setFf(formData);
       <h3>Article's Title</h3>
     <Input placeholder="Article's title" className="sse" value={title} onChange={(e)=>setTitle(e.target.value)}/>
       </div>
-      <div className="ssm" onClick={handleSubmit}>Submit</div>
+      <div className="ssm" onClick={handleSubmit}>{ready?<>submit</>:<>
+  <i className="fa fa-spinner fa-spin"></i>Saving
+</>}</div>
     </div>
   
       </Modal>
     </div>
-   
+    </div>
     </>
   );
 }
